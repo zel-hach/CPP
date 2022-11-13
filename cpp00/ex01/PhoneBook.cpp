@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 20:35:09 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/11/12 21:37:35 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/11/13 20:02:56 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,15 @@ void PhoneBook :: addcontact(Contact *contact,int i)
     while (j < 5)
     {
         std :: cout << str[j];
-        if (getline(std::cin,data) && !std :: cin.eof())
+        getline(std::cin,data);
+        while(data.empty())
+        {
+            std :: cout << str[j];
+            getline(std::cin,data);
+        }
+        if (std :: cin.eof())
+            exit(0); 
+        else
         {
             if (j == 0)
                 contact[i].setName(data);
@@ -40,8 +48,6 @@ void PhoneBook :: addcontact(Contact *contact,int i)
             if (j == 4)
                 contact[i].setPwd(data);
         }
-        else if (std :: cin.eof())
-            exit(0); 
         j++;
     }
 }
@@ -52,7 +58,7 @@ void PhoneBook :: surchcontact(Contact *contact,int count)
     std :: cout << "index | first name | last name |nickname" << std::endl;
     for (j = 0 ;j < count - 1 ;j++)
     {
-        std :: cout << j << " | " ;
+        std :: cout << j << "|" ;
         for (long unsigned int i = 0; i < contact[j].getName().size(); i++)
         {
             if (i < 9)
@@ -89,10 +95,12 @@ void PhoneBook :: surchcontact(Contact *contact,int count)
     }
         std :: cout << "entrer l’index du contact que vous voulez afficher :" << std ::endl;
         getline(std :: cin ,index_return);
+        if (std :: cin.eof())
+            exit(0);
         for (int j = 0; j < count - 1; j++)
         {
             std :: istringstream istr(index_return);
-            if (istr >> j && j < count - 1)
+            if (istr >> j && j < count - 1 && j >= 0)
             {
                 std :: cout << "index | first name | last name |nickname" << std::endl;
                 std :: cout << j << " | " ;

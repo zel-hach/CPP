@@ -62,6 +62,10 @@
         "locale": "cpp",
         "memory": "cpp",
         "mutex": "cpp",
-        "ratio": "cpp"
+        "ratio": "cpp",
+        "filesystem": "cpp",
+        "stack": "cpp",
+        "bit": "cpp",
+        "iomanip": "cpp"
     }
 }

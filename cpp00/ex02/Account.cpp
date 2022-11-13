@@ -21,7 +21,7 @@
     {
         return (_totalNbWithdrawals);
     }
-	Account :: Account(int initial_deposit )
+	Account :: Account(int initial_deposit)
     {
         _displayTimestamp();
         _accountIndex = _nbAccounts;
