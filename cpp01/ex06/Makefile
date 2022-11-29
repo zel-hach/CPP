@@ -1,7 +1,7 @@
 NAME = Harlfilter
 CC = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98 -Wno-implicit-fallthrough
+CFLAGS = -Wall -Wextra -Werror -std=c++98 
 
 SRC =main.cpp Harl.cpp
 OBJECTS = $(SRC:.c=.o)

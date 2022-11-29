@@ -2,7 +2,6 @@
 
 Zombie::Zombie()
 {
-    this->name = name;
     std :: cout << "constructeur sans parametre" << std :: endl;
 }
 Zombie::Zombie(std ::string name)

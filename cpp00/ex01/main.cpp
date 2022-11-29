@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 20:34:18 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/11/13 20:02:32 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/11/28 22:17:48 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int main(int argc,char **argv)
 
    index = 0;
    count = 1;
+   argv = NULL;
    if (argc == 1)
    {
         while (1)
