@@ -3,12 +3,12 @@ CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = main.cpp ReplaceFile.cpp
+SRC =  main.cpp ReplaceFile.cpp
 OBJECTS = $(SRC:.c=.o)
 
 all: $(NAME)
 INCLUDE : ReplaceFile.hpp
-ReplaceFile: $(OBJECTS)
+ReplaceFile: $(OBJECTS) $(INCLUDE)
 	$(CC) $(CFLAGS) $(OBJECTS) -o $(NAME)
 %.o : %.c $(INCLUDE)
 	$(CC) $(CFLAGS) -o $@ -c $<
