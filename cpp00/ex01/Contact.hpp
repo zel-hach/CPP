@@ -6,9 +6,12 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 20:34:10 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/11/12 20:34:11 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/09 11:13:22 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef CONTACT_HPP
+#define CONTACT_HPP
 
 #include <iostream>
 
@@ -33,3 +36,5 @@ class Contact
         std::string getNumberphone();
         std::string getPwd();
 };
+
+#endif
