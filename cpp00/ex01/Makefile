@@ -6,7 +6,7 @@
 #    By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/12 20:35:03 by zel-hach          #+#    #+#              #
-#    Updated: 2022/11/12 20:36:02 by zel-hach         ###   ########.fr        #
+#    Updated: 2022/12/11 14:20:01 by zel-hach         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRC = Contact.cpp PhoneBook.cpp main.cpp
-OBJECTS = $(SRC:.c=.o)
+OBJECTS = $(SRC:.cpp=.o)
 
 all: $(NAME)
 INCLUDE:Contact.hpp PhoneBook.hpp 
@@ -26,7 +26,7 @@ PhoneBook:	$(OBJECTS) $(INCLUDE)
 %.o : %.c $(INCLUDE)
 	$(CC) $(CFLAGS) -o $@ -c $<
 clean:
-	rm -rf $(NAME)
+	rm -rf $(OBJECTS)
 fclean:clean
 	rm -rf $(NAME)
 re: fclean all

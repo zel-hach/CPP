@@ -6,7 +6,7 @@
 #    By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/09 11:34:11 by zel-hach          #+#    #+#              #
-#    Updated: 2022/12/09 11:34:12 by zel-hach         ###   ########.fr        #
+#    Updated: 2022/12/11 14:20:12 by zel-hach         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRC = megaphone.cpp
-OBJECTS = $(SRC:.c=.o)
+OBJECTS = $(SRC:.cpp=.o)
 
 all: $(NAME)
 
@@ -25,7 +25,7 @@ megaphone:	$(OBJECTS)
 %.o : %.c 
 	$(CC) $(CFLAGS) -o $@ -c $<
 clean:
-	rm -rf $(NAME)
+	rm -rf $(OBJECTS)
 fclean:clean
 	rm -rf $(NAME)
 

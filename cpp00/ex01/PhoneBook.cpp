@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 20:35:09 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/09 11:34:52 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/11 17:11:10 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,14 +95,13 @@ void PhoneBook :: surchcontact(Contact *contact,int count)
     std :: istringstream istr(index_return);
     if (istr >> j && j < count - 1 && j >= 0)
     {
-        std :: cout << "index | first name | last name |nickname" << std::endl;
-        std :: cout << j << "|" ;
-        std :: cout << contact[j].getName();
-        std :: cout << "|";
-        std :: cout << contact[j].getLastname();
-        std :: cout << "|";
-        std :: cout << contact[j].getNickname();
-           std :: cout << std :: endl;
+        std :: cout << "index :" << j << std::endl;
+        std :: cout << "first name :" << contact[j].getName() << std ::endl;;
+        std :: cout << "last name :" << contact[j].getLastname() << std ::endl;;
+        std :: cout <<"nickname : " << contact[j].getNickname()<< std ::endl;;
+        std :: cout <<"phone number : " << contact[j].getNumberphone()<< std ::endl;;
+        std :: cout <<"darkest secret: " << contact[j].getPwd() << std ::endl;;
+        std :: cout << std :: endl;
     }
     else
         std :: cout << "l’index que vous avez entrer n’est pas Valide .";

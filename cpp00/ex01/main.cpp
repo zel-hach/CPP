@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 20:34:18 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/11/28 22:17:48 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/11 14:21:55 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int main(int argc,char **argv)
    {
         while (1)
         {
-            std::cout << "votre choix :";
+            std::cout << "votre choix (ADD,SEARCH,EXIT):";
             getline(std::cin, command);
             if (std::cin.eof())
                 exit(0);
