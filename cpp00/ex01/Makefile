@@ -6,7 +6,7 @@
 #    By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/12 20:35:03 by zel-hach          #+#    #+#              #
-#    Updated: 2022/12/11 14:20:01 by zel-hach         ###   ########.fr        #
+#    Updated: 2022/12/11 18:49:22 by zel-hach         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ INCLUDE:Contact.hpp PhoneBook.hpp
 
 PhoneBook:	$(OBJECTS) $(INCLUDE)
 	$(CC) $(CFLAGS) $(OBJECTS) -o $(NAME)
-%.o : %.c $(INCLUDE)
+%.o : %.cpp $(INCLUDE)
 	$(CC) $(CFLAGS) -o $@ -c $<
 clean:
 	rm -rf $(OBJECTS)

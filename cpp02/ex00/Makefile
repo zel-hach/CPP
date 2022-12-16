@@ -5,22 +5,23 @@
 #                                                     +:+ +:+         +:+      #
 #    By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/12/11 18:55:00 by zel-hach          #+#    #+#              #
-#    Updated: 2022/12/11 18:55:22 by zel-hach         ###   ########.fr        #
+#    Created: 2022/12/16 16:25:08 by zel-hach          #+#    #+#              #
+#    Updated: 2022/12/16 17:26:53 by zel-hach         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ReplaceFile
+NAME = Fixed
 CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC =  main.cpp ReplaceFile.cpp
+SRC = main.cpp fixed.cpp
 OBJECTS = $(SRC:.cpp=.o)
 
 all: $(NAME)
-INCLUDE : ReplaceFile.hpp
-ReplaceFile: $(OBJECTS) $(INCLUDE)
+INCLUDE:  fixed.hpp
+
+Fixed:	$(OBJECTS) $(INCLUDE)
 	$(CC) $(CFLAGS) $(OBJECTS) -o $(NAME)
 %.o : %.cpp $(INCLUDE)
 	$(CC) $(CFLAGS) -o $@ -c $<

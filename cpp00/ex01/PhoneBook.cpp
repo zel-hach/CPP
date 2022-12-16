@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 20:35:09 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/11 17:11:10 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/15 14:09:37 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ void PhoneBook :: addcontact(Contact *contact,int i)
     std ::string str[5] = {"name :" , "lastname :", "nickname :", "number phone :" ,"mot de passe :"};
     j = 0;
     while (j < 5)
-    {
+    { 
         std :: cout << str[j];
-        getline(std::cin,data);
+        getline(std::cin,data); 
         if (std :: cin.eof())
             exit(0);
-        while(data.empty())
+        while(data.empty())   
         {
             std :: cout << str[j];
             getline(std::cin,data);
