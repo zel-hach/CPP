@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 16:58:10 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/16 21:20:29 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/17 22:44:23 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ const int Fixed :: n_bits = 8;
 Fixed :: Fixed()
 {
 	this->val  = 0;
-	std :: cout << "Default constructor called" << std::endl;
 }
 
 Fixed :: Fixed(const int val)
@@ -32,17 +31,14 @@ Fixed :: Fixed(const float val)
 Fixed :: Fixed(const Fixed &p)
 {
 	this->val = p.val;
-	std :: cout << "Copy constructor called"<< std::endl;
 }
 Fixed Fixed :: operator =(const Fixed &p)
 {
 	this->val = p.val;
-	std :: cout << "Copy assignment operator called " << std::endl;
 	return(p);
 }
 int Fixed :: getRawBits( void ) const
 {
-	std :: cout <<  "getRawBits member function called "<< std::endl;
 	return (this->val);
 }
 void Fixed :: setRawBits( int const raw )
@@ -61,9 +57,84 @@ int Fixed :: toInt( void ) const
 		
 Fixed :: ~Fixed()
 {
-	std :: cout <<  "Destructor called" << std::endl;
+	
 }
 
+bool Fixed ::  operator <(const Fixed &rh)
+{
+	return(this->val < rh.getRawBits());
+}
+bool Fixed ::  operator >(const Fixed &rh)
+{
+	return(this->val > rh.getRawBits());
+}
+bool Fixed ::  operator <=(const Fixed &rh)
+{
+	return(this->val <= rh.getRawBits());
+}
+bool Fixed ::  operator >=(const Fixed &rh)
+{
+	return(this->val >= rh.getRawBits());
+}
+bool Fixed ::  operator ==(const Fixed &rh)
+{
+	return(this->val == rh.getRawBits());
+}
+bool Fixed ::  operator !=(const Fixed &rh)
+{
+	return(this->val != rh.getRawBits());
+}
+Fixed Fixed ::  operator +(const Fixed &rh)
+{
+	Fixed s;
+	s.val = this->val + rh.getRawBits();
+	return(s);
+}
+Fixed Fixed ::  operator -(const Fixed &rh)
+{
+	Fixed s;
+	s.val = this->val - rh.getRawBits();
+	return(s);
+}
+Fixed Fixed ::  operator *(const Fixed &rh)
+{
+	Fixed s;
+
+	s.val = (this->toFloat() * rh.toFloat()) * (1 << this->n_bits);
+	return(s);
+}
+Fixed Fixed ::  operator /(const Fixed &rh)
+{
+	Fixed s;
+	s.val = (this->toFloat() / rh.toFloat()) * (1 << this->n_bits);
+	return(s);
+}
+
+Fixed Fixed :: operator ++(int)
+{
+	Fixed	tmp;
+	tmp.val = this->val;
+	val++;
+	return(tmp);
+}
+Fixed& Fixed :: operator ++(void)
+{
+	val++;
+	return(*this);
+}
+Fixed Fixed :: operator --(int)
+{
+	Fixed	tmp;
+	tmp.val = this->val;
+	val--;
+	return(tmp);
+}
+Fixed& Fixed :: operator --(void)
+{
+	val--;
+	return(*this);
+}
+		
 std ::ostream & operator << (std :: ostream &out, const Fixed &f)
 {
 	
