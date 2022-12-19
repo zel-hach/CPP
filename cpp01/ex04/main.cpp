@@ -1,19 +1,36 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/18 13:20:08 by zel-hach          #+#    #+#             */
+/*   Updated: 2022/12/19 15:48:47 by zel-hach         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ReplaceFile.hpp"
 
 int main(int argc ,char **argv)
 {
-    if (argc >= 1)
-    {
-        std :: ifstream infile;
-        std :: ofstream outfile;
+    std :: ifstream infile;
+    std :: ofstream outfile;
+    std ::string line;
 
-        outfile.open("test.replace", std::fstream::in | std::fstream::out | std::fstream::app);
+    if (argc == 4)
+    {
         infile.open(argv[1]);
-        std ::string line;
-        while (getline(infile,line))
+        if (infile.fail())
+            std :: cout <<  "file not exist" <<std :: endl;
+        else
         {
-            outfile << ReplaceFile(line, argv[2] ,argv[3]);
-            outfile << std ::endl;
+            outfile.open(argv[1] + std::string(".replace"), std::fstream::in | std::fstream::out | std::fstream::app);
+            while (getline(infile,line))
+            {
+                outfile << ReplaceFile(line, argv[2] ,argv[3]);
+                outfile << std ::endl;
+            }
         }
     }
     return(0);

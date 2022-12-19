@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/18 13:19:34 by zel-hach          #+#    #+#             */
+/*   Updated: 2022/12/19 20:49:58 by zel-hach         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "HumanB.hpp"
 
 HumanB :: HumanB()
 {
-    this->name = name;
+    
 }
 HumanB :: HumanB(std :: string name)
 {
@@ -19,9 +31,10 @@ void HumanB :: setWeapon(Weapon &weapon)
 }
 void HumanB :: attack()
 {
+    if (weapon != nullptr)
     std :: cout << name << " attacks with their " << weapon->getType() << std :: endl;
 }
 HumanB :: ~HumanB()
 {
-    std :: cout << "l appel de conducteur" << std::endl;
+    std :: cout << "l appel de destructeur" << std::endl;
 }

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Harl.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/18 13:20:44 by zel-hach          #+#    #+#             */
+/*   Updated: 2022/12/19 17:47:05 by zel-hach         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Harl.hpp"
 
 Harl :: Harl()
@@ -29,7 +41,7 @@ void Harl :: complain( std::string level)
     std ::string str[] ={"DEBUG","INFO","WARNING","ERROR"};
     int choix;
     int i;
-    for(i = 0;i < 5; i++)
+    for(i = 0; i < 5; i++)
     {
         if (level == str[i])
             choix = i;

@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 16:58:10 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/18 15:42:40 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/18 12:54:01 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,27 +60,27 @@ Fixed :: ~Fixed()
 	
 }
 
-bool Fixed ::  operator <(const Fixed &rh) const
+bool Fixed ::  operator <(const Fixed &rh)
 {
 	return(this->val < rh.getRawBits());
 }
-bool Fixed ::  operator >(const Fixed &rh) const
+bool Fixed ::  operator >(const Fixed &rh)
 {
 	return(this->val > rh.getRawBits());
 }
-bool Fixed ::  operator <=(const Fixed &rh) const
+bool Fixed ::  operator <=(const Fixed &rh)
 {
 	return(this->val <= rh.getRawBits());
 }
-bool Fixed ::  operator >=(const Fixed &rh) const
+bool Fixed ::  operator >=(const Fixed &rh)
 {
 	return(this->val >= rh.getRawBits());
 }
-bool Fixed ::  operator ==(const Fixed &rh) const
+bool Fixed ::  operator ==(const Fixed &rh)
 {
 	return(this->val == rh.getRawBits());
 }
-bool Fixed ::  operator !=(const Fixed &rh) const
+bool Fixed ::  operator !=(const Fixed &rh)
 {
 	return(this->val != rh.getRawBits());
 }
@@ -135,9 +135,9 @@ Fixed& Fixed :: operator --(void)
 	return(*this);
 }
 
-const Fixed Fixed:: min(const Fixed &a, const Fixed &b)
+Fixed Fixed:: min(const Fixed &a, const Fixed &b)
 {
-	if (a<b)
+	if(a.getRawBits() < b.getRawBits())
 		return(a);
 	else
 		return(b);
@@ -145,14 +145,14 @@ const Fixed Fixed:: min(const Fixed &a, const Fixed &b)
 
 Fixed Fixed:: min(Fixed &a, Fixed &b)
 {
-	if (a<b)
+	if (a.getRawBits() < b.getRawBits())
 		return(a);
 	else
 		return(b);
 }
-const Fixed Fixed:: max(const Fixed &a, const Fixed &b)
+Fixed Fixed:: max(const Fixed &a, const Fixed &b)
 {
-	if(a>b)
+	if(a.getRawBits() > b.getRawBits())
 		return(a);
 	else
 		return(b);
