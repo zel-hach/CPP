@@ -6,7 +6,7 @@
 #    By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/11 18:56:05 by zel-hach          #+#    #+#              #
-#    Updated: 2022/12/11 18:56:25 by zel-hach         ###   ########.fr        #
+#    Updated: 2022/12/21 11:44:09 by zel-hach         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,5 +29,4 @@ clean:
 	rm -rf $(OBJECTS)
 fclean:clean
 	rm -rf $(NAME)
-
 re: fclean all

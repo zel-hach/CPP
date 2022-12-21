@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 13:18:14 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/18 22:26:41 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/21 14:44:48 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Zombie
 public:
     Zombie();
     Zombie(std ::string);
-    void setName(std::string);
+    void setName(std::string);   
     std::string getName() const;
     void announce( void );
     ~Zombie();

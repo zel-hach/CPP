@@ -6,7 +6,7 @@
 #    By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/11 18:55:00 by zel-hach          #+#    #+#              #
-#    Updated: 2022/12/11 18:55:22 by zel-hach         ###   ########.fr        #
+#    Updated: 2022/12/21 14:42:33 by zel-hach         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SRC =  main.cpp ReplaceFile.cpp
 OBJECTS = $(SRC:.cpp=.o)
 
 all: $(NAME)
-INCLUDE : ReplaceFile.hpp
+INCLUDE = ReplaceFile.hpp
 ReplaceFile: $(OBJECTS) $(INCLUDE)
 	$(CC) $(CFLAGS) $(OBJECTS) -o $(NAME)
 %.o : %.cpp $(INCLUDE)

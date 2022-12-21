@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 13:19:34 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/19 20:49:58 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/21 11:41:32 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void HumanB :: setWeapon(Weapon &weapon)
 void HumanB :: attack()
 {
     if (weapon != nullptr)
-    std :: cout << name << " attacks with their " << weapon->getType() << std :: endl;
+        std :: cout << name << " attacks with their " << weapon->getType() << std :: endl;
 }
 HumanB :: ~HumanB()
 {

@@ -6,7 +6,7 @@
 #    By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/16 16:25:08 by zel-hach          #+#    #+#              #
-#    Updated: 2022/12/16 20:46:26 by zel-hach         ###   ########.fr        #
+#    Updated: 2022/12/21 14:45:08 by zel-hach         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SRC = main.cpp fixed.cpp
 OBJECTS = $(SRC:.cpp=.o)
 
 all: $(NAME)
-INCLUDE:  fixed.hpp
+INCLUDE=  fixed.hpp
 
 Fixed:	$(OBJECTS) $(INCLUDE)
 	$(CC) $(CFLAGS) $(OBJECTS) -o $(NAME)

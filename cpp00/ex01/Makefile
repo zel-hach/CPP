@@ -6,7 +6,7 @@
 #    By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/12 20:35:03 by zel-hach          #+#    #+#              #
-#    Updated: 2022/12/11 18:49:22 by zel-hach         ###   ########.fr        #
+#    Updated: 2022/12/21 14:41:08 by zel-hach         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SRC = Contact.cpp PhoneBook.cpp main.cpp
 OBJECTS = $(SRC:.cpp=.o)
 
 all: $(NAME)
-INCLUDE:Contact.hpp PhoneBook.hpp 
+INCLUDE=Contact.hpp PhoneBook.hpp 
 
 PhoneBook:	$(OBJECTS) $(INCLUDE)
 	$(CC) $(CFLAGS) $(OBJECTS) -o $(NAME)

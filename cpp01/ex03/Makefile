@@ -6,7 +6,7 @@
 #    By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/11 18:54:32 by zel-hach          #+#    #+#              #
-#    Updated: 2022/12/11 18:54:52 by zel-hach         ###   ########.fr        #
+#    Updated: 2022/12/21 14:56:14 by zel-hach         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SRC = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 OBJECTS = $(SRC:.cpp=.o)
 
 all: $(NAME)
-INCLUDE :  Weapon.hpp HumanA.hpp HumanB.hpp
+INCLUDE =  Weapon.hpp HumanA.hpp HumanB.hpp
 Weapon: $(OBJECTS) $(INCLUDE)
 	$(CC) $(CFLAGS) $(OBJECTS) -o $(NAME)
 %.o : %.cpp $(INCLUDE)

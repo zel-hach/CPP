@@ -6,7 +6,7 @@
 #    By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/18 13:18:41 by zel-hach          #+#    #+#              #
-#    Updated: 2022/12/18 13:18:42 by zel-hach         ###   ########.fr        #
+#    Updated: 2022/12/21 14:41:43 by zel-hach         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SRC = main.cpp Zombie.cpp zombieHorde.cpp
 OBJECTS = $(SRC:.cpp=.o)
 
 all: $(NAME)
-INCLUDE: Zombie.hpp
+INCLUDE= Zombie.hpp
 
 Zombie:	$(OBJECTS) $(INCLUDE)
 	$(CC) $(CFLAGS) $(OBJECTS) -o $(NAME)
