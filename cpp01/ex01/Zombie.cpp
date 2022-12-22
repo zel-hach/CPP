@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 13:18:45 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/19 17:41:16 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/22 21:54:59 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Zombie::Zombie()
 {
-    
+    std::cout << "constructor called" << std::endl;
 }
 Zombie::Zombie(std ::string name)
 {

@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 16:58:13 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/16 17:17:46 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/22 17:08:17 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Fixed{
 		Fixed(const Fixed&);
 		Fixed operator =(const Fixed &);
 		int getRawBits( void ) const;
-		void setRawBits( int const raw );
+		void setRawBits(int const raw);
 		~Fixed();
 };
 

@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 13:20:44 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/19 17:47:05 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/21 18:03:01 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,9 @@ void Harl :: complain( std::string level)
     switch (choix)
     {
         case 0:
-            info();
-         case 1:
             debug();
+         case 1:
+            info();
         case 2:
             warning();
         case 3:

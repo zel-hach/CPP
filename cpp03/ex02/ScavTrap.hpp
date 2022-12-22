@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/18 13:18:37 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/22 21:57:19 by zel-hach         ###   ########.fr       */
+/*   Created: 2022/12/20 18:45:16 by zel-hach          #+#    #+#             */
+/*   Updated: 2022/12/21 20:55:24 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef _SCAVTRAP_HPP
+#define _SCAVTRAP_HPP
+#include <iostream>
+#include "ClapTrap.hpp"
 
-int main()
+class ScavTrap : public ClapTrap
 {
-    Zombie z1;
-    z1.announce();
-    Zombie zi("zineb");
-    zi.announce();
-    Zombie *zl = new Zombie("sahar");
-    zl->announce();
-    Zombie *z;
-    z = zombieHorde(15, "zineb");
-    // z->announce();
-    delete zl;
-    delete[] z;
-    return (0);
-}
+	public:
+	ScavTrap();
+	ScavTrap(std::string name);
+	ScavTrap(const ScavTrap&);
+	ScavTrap operator=(const ScavTrap&);
+	~ScavTrap();
+	void guardGate();
+};
+#endif

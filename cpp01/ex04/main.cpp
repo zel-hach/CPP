@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 13:20:08 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/19 15:48:47 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/21 17:48:44 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int main(int argc ,char **argv)
     {
         infile.open(argv[1]);
         if (infile.fail())
-            std :: cout <<  "file not exist" <<std :: endl;
+            std :: cout <<  "file not exist" << std :: endl;
         else
         {
             outfile.open(argv[1] + std::string(".replace"), std::fstream::in | std::fstream::out | std::fstream::app);

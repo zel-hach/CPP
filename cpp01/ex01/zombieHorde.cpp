@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 13:18:52 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/21 12:10:13 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/22 21:54:13 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ Zombie* zombieHorde(int N, std::string name)
         return(0);
     }
     Zombie *zombieH = new Zombie[N];
+    //Zombie *zombieH = (Zombie *) malloc(sizeof(Zombie) * N);
     i = 0;
     while (i < N)
     { 

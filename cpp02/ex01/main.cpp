@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 16:58:16 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/16 21:08:23 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/22 18:48:40 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 int main( void ) {
 Fixed a;
 Fixed const b( 10 );
-Fixed const c( 42.42f );
+Fixed const c(42.42f);
 Fixed const d( b );
-a = Fixed( 1234.4321f );
+a = Fixed(1234.4321f);
 std::cout << "a is " << a << std::endl;
 std::cout << "b is " << b << std::endl;
 std::cout << "c is " << c << std::endl;

@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 18:45:48 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/21 21:18:25 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/21 20:57:49 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,16 +42,6 @@ ScavTrap ScavTrap :: operator=(const ScavTrap& c)
 	this->Energy_points = c.Energy_points;
 	this->Attack_damage = c.Attack_damage;
 	return(*this);
-}
-void ScavTrap :: attack(const std::string& target)
-{
-	if(Energy_points > 0 && Hit_points > 0)
-	{
-		Energy_points -= 1;
-		std::cout << "ScavTrap: " << name << " attacks " << target << ", causing " << Attack_damage << " points of damage!" << std::endl;
-	}
-	else 
-		std :: cout << "ni de vie et ni d energie" << std ::endl;
 }
 void ScavTrap :: guardGate()
 {
