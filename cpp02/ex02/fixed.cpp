@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 16:58:10 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/18 15:42:40 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/23 17:35:31 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,26 +84,26 @@ bool Fixed ::  operator !=(const Fixed &rh) const
 {
 	return(this->val != rh.getRawBits());
 }
-Fixed Fixed ::  operator +(const Fixed &rh)
+Fixed Fixed ::  operator +(const Fixed &rh) const
 {
 	Fixed s;
 	s.val = this->val + rh.getRawBits();
 	return(s);
 }
-Fixed Fixed ::  operator -(const Fixed &rh)
+Fixed Fixed ::  operator -(const Fixed &rh) const
 {
 	Fixed s;
 	s.val = this->val - rh.getRawBits();
 	return(s);
 }
-Fixed Fixed ::  operator *(const Fixed &rh)
+Fixed Fixed ::  operator *(const Fixed &rh) const
 {
 	Fixed s;
 
 	s.val = (this->toFloat() * rh.toFloat()) * (1 << this->n_bits);
 	return(s);
 }
-Fixed Fixed ::  operator /(const Fixed &rh)
+Fixed Fixed ::  operator /(const Fixed &rh) const
 {
 	Fixed s;
 	s.val = (this->toFloat() / rh.toFloat()) * (1 << this->n_bits);
@@ -164,9 +164,8 @@ Fixed Fixed:: max(Fixed &a, Fixed &b)
 	else
 		return(b);
 }
-std ::ostream & operator << (std :: ostream &out, const Fixed &f)
+std ::ostream &operator << (std :: ostream &out, const Fixed &f)
 {
-	
 	out << f.toFloat();
 	return (out);
 }

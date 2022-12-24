@@ -6,22 +6,20 @@
 #    By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/16 16:25:08 by zel-hach          #+#    #+#              #
-#    Updated: 2022/12/22 16:57:57 by zel-hach         ###   ########.fr        #
+#    Updated: 2022/12/23 16:19:58 by zel-hach         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Fixed
 CC = c++
-
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-
 SRC = main.cpp fixed.cpp
 OBJECTS = $(SRC:.cpp=.o)
-
-all: $(NAME)
 INCLUDE = fixed.hpp
 
-Fixed:	$(OBJECTS)
+all: $(NAME)
+
+Fixed: $(OBJECTS)
 	$(CC) $(CFLAGS) $(OBJECTS) -o $(NAME)
 %.o : %.cpp $(INCLUDE)
 	$(CC) $(CFLAGS) -o $@ -c $<
