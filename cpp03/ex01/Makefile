@@ -6,7 +6,7 @@
 #    By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/20 16:55:08 by zel-hach          #+#    #+#              #
-#    Updated: 2022/12/21 20:56:55 by zel-hach         ###   ########.fr        #
+#    Updated: 2022/12/25 19:11:39 by zel-hach         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ all :$(NAME)
 ScavTrap: $(OBJECTS) $(INCLUDE)
 	$(CC) $(FLAGS) $(OBJECTS) -o $(NAME)
 %.o : %.cpp $(INCLUDE)
-	$(CC) $(CFLAGS) -o $@ -c $<
+	$(CC) $(FLAGS) -o $@ -c $<
 clean:
 	rm -rf $(OBJECTS)
 fclean: clean

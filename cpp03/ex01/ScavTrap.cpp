@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 18:45:48 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/21 21:18:25 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/25 22:27:47 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void ScavTrap :: attack(const std::string& target)
 }
 void ScavTrap :: guardGate()
 {
-	std :: cout << " ScavTrap est entré en mode Gate keeper" << std::endl;
+	std :: cout << "ScavTrap est entré en mode Gate keeper" << std::endl;
 }
 ScavTrap :: ~ScavTrap()
 {

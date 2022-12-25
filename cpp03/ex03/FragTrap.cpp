@@ -6,22 +6,21 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 21:42:08 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/22 16:51:24 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/25 22:39:14 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap :: FragTrap()
+FragTrap :: FragTrap():ClapTrap()
 {
 	Hit_points = 100;
 	Energy_points = 100;
 	Attack_damage = 30;
 	std :: cout << "constructeur sans parametre  FrapTrap" << std ::endl;
 }
-FragTrap :: FragTrap(std:: string name)
+FragTrap :: FragTrap(std:: string name):ClapTrap(name)
 {
-	this->name = name;
 	Hit_points = 100;
 	Energy_points = 100;
 	Attack_damage = 30;
@@ -45,8 +44,20 @@ FragTrap FragTrap :: operator=(const FragTrap& c)
 }
 void FragTrap :: highFivesGuys(void)
 {
-	std :: cout << " une demande de high fives" << std::endl;
+	std :: cout << "une demande de high fives" << std::endl;
 }
+
+void FragTrap :: attack(const std::string& target)
+{
+	if(Energy_points > 0 && Hit_points > 0)
+	{
+		Energy_points -= 1;
+		std::cout << "FragTrap : " << name << " attacks " << target << ", causing " << Attack_damage << " points of damage!" << std::endl;
+	}
+	else 
+		std :: cout << "ni de vie et ni d energie" << std ::endl;
+}
+
 FragTrap :: ~FragTrap()
 {
 	std :: cout << "destructeur FrapTrap" << std ::endl;

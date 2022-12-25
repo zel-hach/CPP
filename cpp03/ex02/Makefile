@@ -6,11 +6,11 @@
 #    By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/20 16:55:08 by zel-hach          #+#    #+#              #
-#    Updated: 2022/12/24 20:52:41 by zel-hach         ###   ########.fr        #
+#    Updated: 2022/12/25 22:18:28 by zel-hach         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ScavTrap
+NAME = FragTrap
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
@@ -19,10 +19,10 @@ INCLUDE = ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
 OBJECTS = $(SRC:.cpp=.o)
 
 all :$(NAME)
-ScavTrap: $(OBJECTS) $(INCLUDE)
+FragTrap: $(OBJECTS) $(INCLUDE)
 	$(CC) $(FLAGS) $(OBJECTS) -o $(NAME)
 %.o : %.cpp $(INCLUDE)
-	$(CC) $(CFLAGS) -o $@ -c $<
+	$(CC) $(FLAGS) -o $@ -c $<
 clean:
 	rm -rf $(OBJECTS)
 fclean: clean

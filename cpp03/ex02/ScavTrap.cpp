@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 18:45:48 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/21 20:57:49 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/25 22:29:56 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,20 @@ ScavTrap ScavTrap :: operator=(const ScavTrap& c)
 }
 void ScavTrap :: guardGate()
 {
-	std :: cout << " ScavTrap est entré en mode Gate keeper" << std::endl;
+	std :: cout << "ScavTrap est entré en mode Gate keeper" << std::endl;
 }
+
+void ScavTrap :: attack(const std::string& target)
+{
+	if(Energy_points > 0 && Hit_points > 0)
+	{
+		Energy_points -= 1;
+		std::cout << "ScavTrap: " << name << " attacks " << target << ", causing " << Attack_damage << " points of damage!" << std::endl;
+	}
+	else 
+		std :: cout << "ni de vie et ni d energie" << std ::endl;
+}
+
 ScavTrap :: ~ScavTrap()
 {
 	std :: cout << "destructeur ScavTrap" << std ::endl;

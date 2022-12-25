@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 17:05:34 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/21 20:09:39 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/25 21:54:46 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ ClapTrap :: ClapTrap()
 	Hit_points = 10;
 	Energy_points = 10;
 	Attack_damage = 0;
-	std :: cout << "constructeur sans parametre" << std ::endl;
+	std :: cout << "constructeur sans parametre ClapTrap" << std ::endl;
 }
 
 ClapTrap :: ClapTrap(std::string name)
@@ -26,7 +26,7 @@ ClapTrap :: ClapTrap(std::string name)
 	Hit_points = 10;
 	Energy_points = 10;
 	Attack_damage = 0;
-	std :: cout << "constructeur avec parametre" << std ::endl;
+	std :: cout << "constructeur avec parametre ClapTrap" << std ::endl;
 }
 
 ClapTrap :: ClapTrap(const ClapTrap &copy)
@@ -35,7 +35,7 @@ ClapTrap :: ClapTrap(const ClapTrap &copy)
 	this->Hit_points = copy.Hit_points;
 	this->Energy_points = copy.Energy_points;
 	this->Attack_damage = copy.Attack_damage;
-	std :: cout << "constructeur de copy" << std ::endl;
+	std :: cout << "constructeur de copy ClapTrap" << std ::endl;
 }
 
 ClapTrap& ClapTrap ::  operator =(const ClapTrap &claptrap)
@@ -70,7 +70,7 @@ void ClapTrap :: setName(std::string name)
 
 ClapTrap :: ~ClapTrap()
 {
-	std :: cout << "destructeur" << std ::endl;
+	std :: cout << "destructeur ClapTrap called" << std ::endl;
 }
 void ClapTrap :: attack(const std::string& target)
 {
@@ -80,14 +80,16 @@ void ClapTrap :: attack(const std::string& target)
 		std::cout << "ClapTrap: " << name << " attacks " << target << ", causing " << Attack_damage << " points of damage!" << std::endl;
 	}
 	else 
-		std :: cout << "ni de vie et ni d energie" << std ::endl;
+		std :: cout << "nor life or energy." << std ::endl;
 }
 void ClapTrap :: takeDamage(unsigned int amount)
 {
-	if (Hit_points > amount)
+	if (Hit_points > (int )amount)
 		Hit_points = Hit_points - amount;
 	else
 		Hit_points = 0;
+	std::cout << " he loses " << amount << ",final " << Hit_points << "hit points" << std::endl;
+	
 }
 void ClapTrap :: beRepaired(unsigned int amount)
 {
@@ -95,7 +97,8 @@ void ClapTrap :: beRepaired(unsigned int amount)
 	{
 		Hit_points = Hit_points + amount;
 		Energy_points -= 1;
+		std :: cout << "he regains :"  << amount << ",final " << Hit_points << " hit points" << std ::endl;
 	}
 	else 
-		std :: cout << "ni de vie et ni d energie" << std ::endl;
+		std :: cout << "nor life or energy." << std ::endl;
 }
