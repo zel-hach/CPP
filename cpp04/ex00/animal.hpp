@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 20:12:19 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/26 20:23:13 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/27 18:08:29 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,29 +26,7 @@ class Animal
 		~Animal();
 		std::string getType() const;
 		void setType(std::string);
-		void makeSound();
-};
-
-class Dog : public Animal
-{
-	public :
-		Dog();
-		Dog(std::string);
-		Dog(const Dog&);
-		Dog& operator=(const Dog&);
-		~Dog();
-		void makeSound();
-};
-
-class Cat : public Animal
-{
-	public :
-		Cat();
-		Cat(std::string);
-		Cat(const Cat&);
-		Cat& operator=(const Cat&);
-		~Cat();
-		void makeSound();
+		virtual void makeSound() const;
 };
 
 #endif

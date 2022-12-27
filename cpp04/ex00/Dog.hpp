@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   animal.hpp                                         :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/26 20:12:19 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/27 23:37:35 by zel-hach         ###   ########.fr       */
+/*   Created: 2022/12/27 16:50:23 by zel-hach          #+#    #+#             */
+/*   Updated: 2022/12/27 18:07:00 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef _ANIMAL_HPP
-#define _ANIMAL_HPP
+#ifndef _DOG_HPP
+#define _DOG_HPP
 #include<iostream>
+#include "animal.hpp"
 
-class Animal
+class Dog : public Animal
 {
-	protected:
-		std::string type;
-	public:
-		Animal();
-		Animal(std::string);
-		Animal(const Animal&);
-		Animal& operator=(const Animal&);
-		virtual ~Animal();
-		std::string getType() const;
-		void setType(std::string);
-		virtual void makeSound() const = 0;
+	public :
+		Dog();
+		Dog(const Dog&);
+		Dog& operator=(const Dog&);
+		~Dog();
+		void makeSound() const;
 };
 
 #endif

@@ -6,21 +6,38 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 20:12:01 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/26 20:31:28 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/28 00:04:41 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "animal.hpp"
+# include "animal.hpp"
+# include "Cat.hpp"
+#include "Dog.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 
 int main()
 {
-const Animal* meta = new Animal();
-const Animal* j = new Dog();
-const Animal* i = new Cat();
-std::cout << j->getType() << " " << std::endl;
-std::cout << i->getType() << " " << std::endl;
-i->makeSound(); //will output the cat sound!
-j->makeSound();
-meta->makeSound();
-return 0;
+        // const std::string    *tab;
+        // Cat    org;
+        // org.getBrain()->setIdea("Drink water");
+        // {
+        //     Cat cpy = org;
+        //     cpy.getBrain()->setIdea("Drink choco");
+        // }
+        // tab = org.getBrain()->getIdea();
+        // for(int i = 0; i < 3; i++)
+        //     std::cout << tab[i] << std::endl;
+
+
+    const std::string    *tab;
+        Cat    *org= new Cat();
+        org->getBrain()->setIdea("Drink water");
+        Cat *cpy = org;
+        cpy->getBrain()->setIdea("Drink choco");
+		delete cpy;
+        tab = cpy->getBrain()->getIdea();
+        for(int i = 0; i < 3; i++)
+            std::cout << tab[i] << std::endl;
+ return 0;
 }

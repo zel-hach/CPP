@@ -1,39 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 20:26:44 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/27 18:06:50 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/27 19:21:11 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "WrongCat.hpp"
 
-Cat  :: Cat()
+WrongCat:: WrongCat()
 {
-	this->type = "Cat";
-	std ::cout << "default constractor Cat is called" << std::endl;
+	this->type = "WrongCat";
+	std ::cout << "default constractor WrongCat is called" << std::endl;
 }
 
-Cat  :: Cat(const Cat& copy)
+WrongCat:: WrongCat(const WrongCat& copy)
 {
 	this->type = copy.type;
-	std ::cout << "copy constractor Cat  is called" << std::endl;
+	std ::cout << "copy constractor WrongCat is called" << std::endl;
 }
-Cat& Cat  :: operator=(const Cat& a)
+WrongCat& WrongCat:: operator=(const WrongCat& a)
 {
 	this->type = a.type;
-	std ::cout << "Cat : operator assignement  is called" << std::endl;
+	std ::cout << "WrongCat : operator assignement  is called" << std::endl;
 	return(*this);
 }
-Cat  :: ~Cat()
+WrongCat:: ~WrongCat()
 {
-	std ::cout << "destractor Cat is called" << std::endl;
+	std ::cout << "destractor WrongCat is called" << std::endl;
 }
-void Cat  ::makeSound() const
+void WrongCat::makeSound() const
 {
-	std :: cout << "Cat sound is :myw myw" << std::endl;
+	std :: cout << "WrongCat sound is :myw myw" << std::endl;
 }

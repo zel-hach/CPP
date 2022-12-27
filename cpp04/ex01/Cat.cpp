@@ -6,33 +6,45 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 20:26:44 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/26 20:32:08 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/27 23:56:20 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "animal.hpp"
+#include "Cat.hpp"
 
 Cat  :: Cat()
 {
-	
+	this->type = "Cat";
+	this->brain = new Brain();
+	std ::cout << "default constractor Cat is called" << std::endl;
 }
-Cat  :: Cat(std::string)
+
+Cat  :: Cat(const Cat& copy)
 {
-	
+	*this = copy;
+	std ::cout << "copy constractor Cat  is called" << std::endl;
 }
-Cat  :: Cat(const Cat&)
+Cat& Cat  :: operator=(const Cat& a)
 {
-	
-}
-Cat& Cat  :: operator=(const Cat&)
-{
-	
+	this->type = a.type;
+	this->brain = new Brain(*a.brain);
+	std ::cout << "Cat : operator assignement  is called" << std::endl;
+	return(*this);
 }
 Cat  :: ~Cat()
 {
-	
+	delete brain;
+	std ::cout << "destractor Cat is called" << std::endl;
 }
-void Cat  ::makeSound()
+void Cat  ::makeSound() const
 {
-	
+	std :: cout << "Cat sound is :myw myw" << std::endl;
+}
+Brain* Cat:: getBrain() const
+{
+	return(this->brain);
+}
+void Cat :: setBrain(Brain brain)
+{
+	*this->brain = brain;
 }
