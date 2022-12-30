@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   animal.hpp                                         :+:      :+:    :+:   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/26 20:12:19 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/28 17:00:29 by zel-hach         ###   ########.fr       */
+/*   Created: 2022/12/30 23:00:41 by zel-hach          #+#    #+#             */
+/*   Updated: 2022/12/30 23:01:05 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef _ANIMAL_HPP
-#define _ANIMAL_HPP
-#include<iostream>
+#ifndef __ROBOTOMYREQUESTFORM_H__
+#define __ROBOTOMYREQUESTFORM_H__
+#include <iostream>
 
-class Animal
-{
-	protected:
-		std::string type;
-	public:
-		Animal();
-		Animal(std::string);
-		Animal(const Animal&);
-		Animal& operator=(const Animal&);
-		virtual ~Animal();
-		std::string getType() const;
-		void setType(std::string);
-		virtual void makeSound() const;
+class RobotomyRequestForm{
+public:
+    RobotomyRequestForm ();
+    RobotomyRequestForm (const RobotomyRequestForm &a);
+    RobotomyRequestForm & operator = (const RobotomyRequestForm &a);
+    ~RobotomyRequestForm ();
 };
 
 #endif
+

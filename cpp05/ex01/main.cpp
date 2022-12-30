@@ -1,32 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   animal.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/26 20:12:19 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/28 17:00:29 by zel-hach         ###   ########.fr       */
+/*   Created: 2022/12/30 18:52:58 by zel-hach          #+#    #+#             */
+/*   Updated: 2022/12/30 20:57:34 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef _ANIMAL_HPP
-#define _ANIMAL_HPP
-#include<iostream>
+#include "Bureaucrat.hpp"
 
-class Animal
+int main()
 {
-	protected:
-		std::string type;
-	public:
-		Animal();
-		Animal(std::string);
-		Animal(const Animal&);
-		Animal& operator=(const Animal&);
-		virtual ~Animal();
-		std::string getType() const;
-		void setType(std::string);
-		virtual void makeSound() const;
-};
-
-#endif
+	Bureaucrat d;
+	Bureaucrat c("sahar",12);
+	try
+	{
+		Bureaucrat b("faiza",20);
+		b.setGrade(100);
+		try{
+			b.dec_Echel();
+			b.inc_Echel();
+		}
+		catch(const std::exception& e)
+		{
+			std::cout << e.what() << '\n';
+		}
+		std::cout << b;
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << e.what() << '\n';
+	}
+	std::cout << c;
+}

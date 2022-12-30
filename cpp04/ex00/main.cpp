@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 20:12:01 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/27 18:26:57 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/28 16:59:50 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,10 @@ const WrongAnimal* t = new WrongCat();
  std::cout << t->getType() << " " << std::endl;
  t->makeSound();
  m->makeSound();
+ delete meta;
+ delete j;
+ delete i;
+ delete m;
+ delete t;
  return 0;
 }

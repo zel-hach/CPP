@@ -6,20 +6,20 @@
 #    By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/20 16:55:08 by zel-hach          #+#    #+#              #
-#    Updated: 2022/12/28 15:29:29 by zel-hach         ###   ########.fr        #
+#    Updated: 2022/12/30 22:39:16 by zel-hach         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Animal
+NAME = Bureaucrat
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = main.cpp animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
-INCLUDE = animal.hpp Cat.hpp Dog.hpp WrongAnimal.hpp WrongCat.hpp Brain.hpp
+SRC = main.cpp Bureaucrat.cpp Form.cpp
+INCLUDE = Bureaucrat.hpp Form.hpp
 OBJECTS = $(SRC:.cpp=.o)
 
 all :$(NAME)
-Animal: $(OBJECTS) $(INCLUDE)
+Bureaucrat: $(OBJECTS) $(INCLUDE)
 	$(CC) $(FLAGS) $(OBJECTS) -o $(NAME)
 %.o : %.cpp $(INCLUDE)
 	$(CC) $(FLAGS) -o $@ -c $<
