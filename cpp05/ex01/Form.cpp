@@ -6,15 +6,15 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 21:02:41 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/30 22:31:11 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/31 13:52:25 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
-Form :: Form():name("sahar"),grad_signe(10),grad_execu(1),signe(0)
-{
+// Form :: Form():name("sahar"),grad_signe(10),grad_execu(1),signe(0)
+// {
 	
-}
+// }
 Form :: Form(const std::string Name, const int signe_g, const int signe_e):name(Name),grad_signe(signe_g),grad_execu(signe_e),signe(0)
 {
 	if (signe_e <= 0 || signe_g <= 0)

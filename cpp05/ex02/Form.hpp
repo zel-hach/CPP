@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 21:02:45 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/30 22:29:19 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/31 13:23:50 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ class Form
 			virtual const char* what() const throw();
 		};
 		void beSigned(Bureaucrat);
+		virtual void execute(Bureaucrat const & executor)const = 0;
 };
 std ::ostream& operator<<(std::ostream& ,const Form&);
 #endif

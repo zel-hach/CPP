@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 16:24:40 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/30 21:41:06 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/31 13:51:57 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <exception>
 #include "Form.hpp"
 
+class Form;
 class Bureaucrat
 {
 	std :: string const name;

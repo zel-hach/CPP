@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 16:47:54 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/30 22:38:19 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/31 13:25:40 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ const char* Bureaucrat ::GradeTooLowException :: what() const throw()
 	return("Grade Too Low");
 }
 
-void Bureaucrat :: signForm(Form f){
+void Bureaucrat :: signForm(Form& f){
 	if (f.getSigne())
 		std::cout << this->name << "signed" << f.getName()  << std::endl;
 	else

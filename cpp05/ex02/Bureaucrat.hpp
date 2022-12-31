@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 16:24:40 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/30 21:41:06 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/31 13:25:48 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,8 @@ class Bureaucrat
 		class GradeTooLowException : public std ::exception{
 			virtual const char* what() const throw();
 		};
-		void signForm(Form);
+		void signForm(Form&);
+		// void executeForm(Form const & Form);
 };
 std ::ostream& operator<<(std::ostream& ,const Bureaucrat&);
 #endif
