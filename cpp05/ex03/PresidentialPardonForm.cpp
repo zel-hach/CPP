@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 22:59:55 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/31 17:07:27 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/31 16:53:01 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ PresidentialPardonForm::PresidentialPardonForm (){
     // std::cout << "PresidentialPardonForm: Default constructor called!" << std::endl;
 }
 
-PresidentialPardonForm::PresidentialPardonForm (std :: string target):Form(target, 25, 5){
+PresidentialPardonForm::PresidentialPardonForm (std :: string target):Form(target, 145, 137){
     
     this->target = target;  
 }

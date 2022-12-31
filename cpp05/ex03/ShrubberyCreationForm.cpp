@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 11:54:52 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/31 17:07:07 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/31 16:53:18 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ ShrubberyCreationForm::ShrubberyCreationForm (){
     std::cout << "ShrubberyCreationForm: Default constructor called!" << std::endl;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm (std :: string target):Form(target, 145, 137){
+ShrubberyCreationForm::ShrubberyCreationForm (std :: string target):Form(target, 25, 5){
     this->target = target;
 }
 /*----------------------------------------------------------------------------*/

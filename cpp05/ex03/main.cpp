@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 18:52:58 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/31 16:28:54 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/31 20:30:53 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
+#include "Intern.hpp"
 
 int main(void)
 {
@@ -84,6 +85,13 @@ int main(void)
 		{
 			std::cout << "Something went wrong: " << e.what() << std::endl;
 		}
+	}
+	{
+		Intern someRandomIntern;
+		Form* rrf;
+		rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+		std :: cout << *rrf << std::endl;
+		delete rrf;		
 	}
 		return 0;
 }

@@ -6,15 +6,13 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 23:00:41 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/31 17:13:11 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/31 16:53:07 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef __ROBOTOMYREQUESTFORM_H__
 #define __ROBOTOMYREQUESTFORM_H__
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
 #include "Form.hpp"
 class RobotomyRequestForm : public Form{
     std :: string target;

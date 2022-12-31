@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 21:02:41 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/31 17:06:18 by zel-hach         ###   ########.fr       */
+/*   Updated: 2022/12/31 16:51:54 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,13 +62,13 @@ const char* Form :: GradeTooLowException :: what() const throw()
 }
 void Form :: beSigned(Bureaucrat b)
 {
-	if (b.getGrade() > this->getGrad_signe())
+	if (b.getGrade() > this->grad_signe)
 		throw Form ::GradeTooLowException();
 	signe = 1;
 }
 void Form :: execute(Bureaucrat const & executor) const
 {
-	if (this->signe == 1 && executor.getGrade() <= this->getGrad_execu())
+	if (this->signe == 1 && executor.getGrade() < this->getGrad_execu())
 		this->action();
 	else
 		throw Form ::GradeTooLowException();
