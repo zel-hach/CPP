@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 17:26:04 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/31 18:05:33 by zel-hach         ###   ########.fr       */
+/*   Updated: 2023/01/02 13:40:20 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,26 +16,26 @@
 #include "ShrubberyCreationForm.hpp"
 /*----------------------------------------------------------------------------*/
 Intern::Intern (){
-    std::cout << "Intern: Default constructor called!" << std::endl;
+    // std::cout << "Intern: Default constructor called!" << std::endl;
 }
 
 /*----------------------------------------------------------------------------*/
 Intern::Intern (const Intern &a){
     *this = a;
-    std::cout << "Intern: Copy constructor called!" << std::endl;
+    // std::cout << "Intern: Copy constructor called!" << std::endl;
 }
 
 /*----------------------------------------------------------------------------*/
 Intern & Intern::operator = (const Intern &a){
     if (this != &a){
-        std::cout << "Intern: Copy assignment operator called!" << std::endl;
+        // std::cout << "Intern: Copy assignment operator called!" << std::endl;
     }
     return(*this);
 }
 
 /*----------------------------------------------------------------------------*/
 Intern::~Intern (){
-    std::cout << "Intern: Destructor called!" << std::endl;
+    // std::cout << "Intern: Destructor called!" << std::endl;
 }
 
 Form* Intern:: makeForm(std::string name, std::string target)
@@ -43,6 +43,7 @@ Form* Intern:: makeForm(std::string name, std::string target)
     std::string str[3] = {"robotomy request", "ShrubberyCreation", "presidential pardon"};
     Form *f;
     int choix;
+    f = NULL;
     
     for(int i = 0; i < 3 ; i++)
         if(name == str[i])
@@ -59,7 +60,7 @@ Form* Intern:: makeForm(std::string name, std::string target)
             f = new PresidentialPardonForm(target);
             break;
         default:
-            throw Form ::GradeTooLowException();
+            std :: cout << "le nom de formulaire n'exist pas " << std ::endl;
         break;
         }
     std :: cout << "Intern creates " << f->getName() << std::endl;

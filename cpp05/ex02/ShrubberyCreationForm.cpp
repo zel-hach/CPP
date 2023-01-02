@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 11:54:52 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/31 17:07:07 by zel-hach         ###   ########.fr       */
+/*   Updated: 2023/01/02 11:52:29 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <fstream>
 /*----------------------------------------------------------------------------*/
 ShrubberyCreationForm::ShrubberyCreationForm (){
-    std::cout << "ShrubberyCreationForm: Default constructor called!" << std::endl;
+    // std::cout << "ShrubberyCreationForm: Default constructor called!" << std::endl;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm (std :: string target):Form(target, 145, 137){
@@ -54,6 +54,6 @@ void ShrubberyCreationForm:: action(void) const
 }
 /*----------------------------------------------------------------------------*/
 ShrubberyCreationForm::~ShrubberyCreationForm (){
-    std::cout << "ShrubberyCreationForm: Destructor called!" << std::endl;
+    // std::cout << "ShrubberyCreationForm: Destructor called!" << std::endl;
 }
 

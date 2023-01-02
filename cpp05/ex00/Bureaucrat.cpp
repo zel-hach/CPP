@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 16:47:54 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/30 20:53:45 by zel-hach         ###   ########.fr       */
+/*   Updated: 2023/01/02 13:46:18 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ Bureaucrat :: Bureaucrat()
 Bureaucrat :: Bureaucrat(std :: string const Name, int Grade):name(Name)
 {
 	if (Grade <= 0 )
-		throw Bureaucrat::GradeTooLowException();
-	if (Grade > 150)
 		throw Bureaucrat::GradeTooHighException();
+	if (Grade > 150)
+		throw Bureaucrat::GradeTooLowException();
 	this->grade = Grade;
 }
 Bureaucrat :: Bureaucrat(const Bureaucrat& copy)
@@ -52,9 +52,9 @@ int Bureaucrat::getGrade() const
 void Bureaucrat :: setGrade(int Grade)
 {
 	if (Grade <= 0 )
-		throw Bureaucrat::GradeTooLowException();
-	if (Grade > 150)
 		throw Bureaucrat::GradeTooHighException();
+	if (Grade > 150)
+		throw Bureaucrat::GradeTooLowException();
 	this->grade = Grade;
 }
 void Bureaucrat :: inc_Echel()

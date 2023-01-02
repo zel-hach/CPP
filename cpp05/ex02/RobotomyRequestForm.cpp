@@ -6,26 +6,26 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 11:50:08 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/31 17:12:04 by zel-hach         ###   ########.fr       */
+/*   Updated: 2023/01/02 11:47:39 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 
-/*----------------------------------------------------------------------------*/
+
 RobotomyRequestForm::RobotomyRequestForm (){
-    std::cout << "RobotomyRequestForm: Default constructor called!" << std::endl;
+    // std::cout << "RobotomyRequestForm: Default constructor called!" << std::endl;
 }
 RobotomyRequestForm::RobotomyRequestForm(std :: string target):Form(target, 72, 45){
     this->target = target;
 }
-/*----------------------------------------------------------------------------*/
+
 RobotomyRequestForm::RobotomyRequestForm (const RobotomyRequestForm &a){
     *this = a;
-    std::cout << "RobotomyRequestForm: Copy constructor called!" << std::endl;
+    // std::cout << "RobotomyRequestForm: Copy constructor called!" << std::endl;
 }
 
-/*----------------------------------------------------------------------------*/
+
 RobotomyRequestForm & RobotomyRequestForm::operator = (const RobotomyRequestForm &a){
     if (this != &a){
         this->target = a.target;
@@ -35,13 +35,13 @@ RobotomyRequestForm & RobotomyRequestForm::operator = (const RobotomyRequestForm
 void RobotomyRequestForm:: action(void) const
 {
     srand(time(0));
-    if (rand()%4 + 1 <= 2)
+    if (rand()<= RAND_MAX / 2)
         std::cout << "l’opération a échoué." << std :: endl;
     else
         std::cout << "la " << target << " a été robotomisée avec succès" << std :: endl;
 }
 /*----------------------------------------------------------------------------*/
 RobotomyRequestForm::~RobotomyRequestForm (){
-    std::cout << "RobotomyRequestForm: Destructor called!" << std::endl;
+    // std::cout << "RobotomyRequestForm: Destructor called!" << std::endl;
 }
 

@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 21:02:41 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/31 17:06:18 by zel-hach         ###   ########.fr       */
+/*   Updated: 2023/01/02 11:39:58 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,6 @@ void Form :: execute(Bureaucrat const & executor) const
 }
 std ::ostream& operator<<(std::ostream& o,const Form& a)
 {
-	o << a.getName() << " Form " << a.getGrad_signe() << " && " << a.getGrad_execu() << std::endl;
+	o << "Form est : " << a.getName() << " son grade requis pour le signer est : " << a.getGrad_signe() << " &&  son grade constant requis pour l’exécuter est : " << a.getGrad_execu() << std::endl;
 	return(o);
 }

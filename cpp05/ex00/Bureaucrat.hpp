@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 16:24:40 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/30 18:29:20 by zel-hach         ###   ########.fr       */
+/*   Updated: 2023/01/02 11:15:48 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Bureaucrat
 		Bureaucrat(std :: string const,int);
 		Bureaucrat(const Bureaucrat&);
 		Bureaucrat& operator=(const Bureaucrat&);
-		~Bureaucrat();
+		virtual ~Bureaucrat();
 		std :: string getName()const;
 		int getGrade() const;
 		void setGrade(int);

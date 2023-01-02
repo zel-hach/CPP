@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 21:02:41 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/31 16:51:54 by zel-hach         ###   ########.fr       */
+/*   Updated: 2023/01/02 13:39:26 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ Form :: Form():name("sahar"),grad_signe(10),grad_execu(1),signe(0)
 Form :: Form(const std::string Name, const int signe_g, const int signe_e):name(Name),grad_signe(signe_g),grad_execu(signe_e),signe(0)
 {
 	if (signe_e <= 0 || signe_g <= 0)
-		throw Form::GradeTooLowException();
-	if (signe_e > 150 || signe_g > 150)
 		throw Form::GradeTooHighException();
+	if (signe_e > 150 || signe_g > 150)
+		throw Form::GradeTooLowException();
 }
 Form :: Form(const Form& copy):name(copy.name),grad_signe(copy.grad_signe),grad_execu(copy.grad_execu),signe(copy.signe)
 {
@@ -76,6 +76,6 @@ void Form :: execute(Bureaucrat const & executor) const
 }
 std ::ostream& operator<<(std::ostream& o,const Form& a)
 {
-	o << a.getName() << " Form " << a.getGrad_signe() << " && " << a.getGrad_execu() << std::endl;
+	o << "Form est : " << a.getName() << " son grade requis pour le signer est : " << a.getGrad_signe() << " &&  son grade constant requis pour l’exécuter est : " << a.getGrad_execu() << std::endl;
 	return(o);
-}
+}	

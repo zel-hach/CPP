@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 21:02:45 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/31 16:55:49 by zel-hach         ###   ########.fr       */
+/*   Updated: 2023/01/02 11:42:13 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class Form
 		int getGrad_signe() const;
 		int getGrad_execu() const;
 		bool getSigne();
-		~Form();
+		virtual ~Form();
 		class GradeTooHighException : public std ::exception{
 			virtual const char* what() const throw();
 		};

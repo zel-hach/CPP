@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 16:47:54 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/30 22:38:19 by zel-hach         ###   ########.fr       */
+/*   Updated: 2023/01/02 13:42:09 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ Bureaucrat :: Bureaucrat()
 Bureaucrat :: Bureaucrat(std :: string const Name, int Grade):name(Name)
 {
 	if (Grade <= 0 )
-		throw Bureaucrat::GradeTooLowException();
-	if (Grade > 150)
 		throw Bureaucrat::GradeTooHighException();
+	if (Grade > 150)
+		throw Bureaucrat::GradeTooLowException();
 	this->grade = Grade;
 }
 Bureaucrat :: Bureaucrat(const Bureaucrat& copy)
@@ -51,9 +51,9 @@ int Bureaucrat::getGrade() const
 void Bureaucrat :: setGrade(int Grade)
 {
 	if (Grade <= 0 )
-		throw Bureaucrat::GradeTooLowException();
-	if (Grade > 150)
 		throw Bureaucrat::GradeTooHighException();
+	if (Grade > 150)
+		throw Bureaucrat::GradeTooLowException();
 	this->grade = Grade;
 }
 void Bureaucrat :: inc_Echel()
@@ -79,7 +79,7 @@ const char* Bureaucrat ::GradeTooLowException :: what() const throw()
 
 void Bureaucrat :: signForm(Form f){
 	if (f.getSigne())
-		std::cout << this->name << "signed" << f.getName()  << std::endl;
+		std::cout << this->name << " signed " << f.getName()  << std::endl;
 	else
 		std::cout << this->name << "couldn’t sign" << f.getName() << " because they need to work harder." << std::endl;
 }
