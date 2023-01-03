@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 17:26:04 by zel-hach          #+#    #+#             */
-/*   Updated: 2023/01/02 13:40:20 by zel-hach         ###   ########.fr       */
+/*   Updated: 2023/01/03 21:46:09 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,29 +40,35 @@ Intern::~Intern (){
 
 Form* Intern:: makeForm(std::string name, std::string target)
 {
-    std::string str[3] = {"robotomy request", "ShrubberyCreation", "presidential pardon"};
+    std::string str[3] = {"robotomy request", "Shrubbery Creation", "presidential pardon"};
     Form *f;
     int choix;
     f = NULL;
     
+    choix  = 4;
     for(int i = 0; i < 3 ; i++)
-        if(name == str[i])
-        choix = i;
+    {
+        if(name == str[i]) 
+            choix = i;
+    }
     switch (choix)
     {
         case 0:
             f = new ShrubberyCreationForm(target);
+            std :: cout << "Intern creates " << f->getName()<< std::endl;
             break;
         case 1:
             f = new RobotomyRequestForm(target);
+            std :: cout << "Intern creates " << f->getName()<< std::endl;
             break;
         case 2:
             f = new PresidentialPardonForm(target);
+            std :: cout << "Intern creates " << f->getName()<< std::endl;
             break;
         default:
-            std :: cout << "le nom de formulaire n'exist pas " << std ::endl;
+            throw "le nom de formulaire n'exist pas ";
+            // std :: cout << "le nom de formulaire n'exist pas " << std ::endl;
         break;
         }
-    std :: cout << "Intern creates " << f->getName() << std::endl;
     return(f);
 }

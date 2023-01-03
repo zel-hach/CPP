@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 18:52:58 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/31 20:30:53 by zel-hach         ###   ########.fr       */
+/*   Updated: 2023/01/03 21:46:51 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,9 +89,15 @@ int main(void)
 	{
 		Intern someRandomIntern;
 		Form* rrf;
-		rrf = someRandomIntern.makeForm("robotomy request", "Bender");
-		std :: cout << *rrf << std::endl;
-		delete rrf;		
+		try{
+			rrf = someRandomIntern.makeForm("tttt", "Bender");
+			std :: cout << *rrf<< std::endl;
+			delete rrf;		
+		}
+		catch(const char* e)
+		{
+			std::cout << e << std::endl;
+		}
 	}
 		return 0;
 }
