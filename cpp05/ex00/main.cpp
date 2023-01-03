@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 18:52:58 by zel-hach          #+#    #+#             */
-/*   Updated: 2022/12/30 20:57:34 by zel-hach         ###   ########.fr       */
+/*   Updated: 2023/01/03 13:09:34 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int main()
 {
 	Bureaucrat d;
-	Bureaucrat c("sahar",12);
+	Bureaucrat c(NULL,12);
 	try
 	{
 		Bureaucrat b("faiza",20);

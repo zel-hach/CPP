@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 21:02:41 by zel-hach          #+#    #+#             */
-/*   Updated: 2023/01/02 13:42:34 by zel-hach         ###   ########.fr       */
+/*   Updated: 2023/01/03 13:18:49 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@ Form :: Form():name("sahar"),grad_signe(10),grad_execu(1),signe(0)
 {
 	
 }
+
 Form :: Form(const std::string Name, const int signe_g, const int signe_e):name(Name),grad_signe(signe_g),grad_execu(signe_e),signe(0)
 {
 	if (signe_e <= 0 || signe_g <= 0)
@@ -22,6 +23,15 @@ Form :: Form(const std::string Name, const int signe_g, const int signe_e):name(
 	if (signe_e > 150 || signe_g > 150)
 		throw Bureaucrat::GradeTooLowException();
 }
+
+Form :: Form(const std::string* Name, const int signe_g, const int signe_e):name(Name != NULL ? *Name : ""),grad_signe(signe_g),grad_execu(signe_e),signe(0)
+{
+	if (signe_e <= 0 || signe_g <= 0)
+		throw Bureaucrat::GradeTooHighException();
+	if (signe_e > 150 || signe_g > 150)
+		throw Bureaucrat::GradeTooLowException();
+}
+
 Form :: Form(const Form& copy):name(copy.name),grad_signe(copy.grad_signe),grad_execu(copy.grad_execu),signe(copy.signe)
 {
 
@@ -44,7 +54,7 @@ int Form :: getGrad_execu() const
 {
 	return(this->grad_execu);
 }
-bool Form :: getSigne()
+bool Form :: getSigne() const
 {
 	return(this->signe);
 }

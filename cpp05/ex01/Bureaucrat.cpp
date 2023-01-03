@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 16:47:54 by zel-hach          #+#    #+#             */
-/*   Updated: 2023/01/02 13:42:09 by zel-hach         ###   ########.fr       */
+/*   Updated: 2023/01/03 13:12:48 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,15 @@ Bureaucrat :: Bureaucrat(std :: string const Name, int Grade):name(Name)
 	if (Grade > 150)
 		throw Bureaucrat::GradeTooLowException();
 	this->grade = Grade;
+}
+Bureaucrat :: Bureaucrat(std :: string const * Name, int Grade):name(Name != NULL ? *Name : "")
+{
+	puts("1");
+	if (Grade <= 0 )
+		throw Bureaucrat::GradeTooHighException();
+	if (Grade > 150)
+		throw Bureaucrat::GradeTooLowException();
+		this->grade = Grade;
 }
 Bureaucrat :: Bureaucrat(const Bureaucrat& copy)
 {
