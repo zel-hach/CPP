@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/31 17:26:04 by zel-hach          #+#    #+#             */
-/*   Updated: 2023/01/03 21:46:09 by zel-hach         ###   ########.fr       */
+/*   Updated: 2023/01/04 13:03:35 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,6 @@ Form* Intern:: makeForm(std::string name, std::string target)
             break;
         default:
             throw "le nom de formulaire n'exist pas ";
-            // std :: cout << "le nom de formulaire n'exist pas " << std ::endl;
         break;
         }
     return(f);
