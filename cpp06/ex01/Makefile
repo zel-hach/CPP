@@ -6,7 +6,7 @@
 #    By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/20 16:55:08 by zel-hach          #+#    #+#              #
-#    Updated: 2023/01/02 21:41:54 by zel-hach         ###   ########.fr        #
+#    Updated: 2023/01/04 21:29:38 by zel-hach         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRC = main.cpp
-INCLUDE = 
+INCLUDE = serialise.hpp
 OBJECTS = $(SRC:.cpp=.o)
 
 all :$(NAME)

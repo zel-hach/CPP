@@ -1,38 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   serialise.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/30 18:52:58 by zel-hach          #+#    #+#             */
-/*   Updated: 2023/01/05 15:11:38 by zel-hach         ###   ########.fr       */
+/*   Created: 2023/01/04 21:26:02 by zel-hach          #+#    #+#             */
+/*   Updated: 2023/01/04 21:28:53 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#ifndef _SERIALISE_HPP_
+#define  _SERIALISE_HPP_
 
-int main()
+#include <iostream>
+typedef struct t_data
 {
-	Bureaucrat d;
-	Bureaucrat c(NULL,12);
-	try
-	{
-		Bureaucrat b("faiza",20);
-		b.setGrade(100);
-		try{
-			b.dec_Echel();
-			b.inc_Echel();
-		}
-		catch(const std::exception& e)
-		{
-			std::cout << e.what() << '\n';
-		}
-		std::cout << b;
-	}
-	catch(const std::exception& e)
-	{
-		std::cout << e.what() << '\n';
-	}
-	std::cout << c;
-}
+	int i;
+	char c;
+} Data;
+
+uintptr_t serialize(Data* ptr);
+Data* deserialize(uintptr_t raw);
+int main();
+#endif

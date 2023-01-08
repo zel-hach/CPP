@@ -6,26 +6,25 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 17:40:09 by zel-hach          #+#    #+#             */
-/*   Updated: 2023/01/04 16:55:53 by zel-hach         ###   ########.fr       */
+/*   Updated: 2023/01/08 18:02:37 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
-#include <cmath>
-#include <sstream>
-#include <iomanip>
+#include "Convert.hpp"
 
 void convert_char(char c)
 {
-	std ::cout <<"char :"<< c << std::endl;
+	if((c > 97 && c < 122) || (c > 65 && (c < 90)))
+		std ::cout <<"char :"<< c << std::endl;
+	else
+		std ::cout <<"char : Non displayable "<< std::endl;
 	std ::cout <<"int :" << static_cast<int>(c) << std::endl;
 	std ::cout <<"float :"  << std::setprecision(1) << std::fixed << static_cast<float>(c) << "f"<< std::endl;
 	std ::cout <<"double :"  << std::setprecision(1) << std::fixed << static_cast<double>(c) << std::endl;
 }
 void convert_int(int i)
 {
-	if (isprint(i))
+	if (isalpha(i))
 		std ::cout <<"char : "<< static_cast<char>(i) << std::endl;
 	else
 		std ::cout <<"char : Non displayable"<< std::endl;
@@ -35,7 +34,7 @@ void convert_int(int i)
 }
 void convert_float(float f)
 {
-	if (isprint(f))
+	if (isalpha(f))
 		std ::cout <<"char : "<< static_cast<char>(f) << std::endl;
 	else
 		std ::cout <<"char : Non displayable "<< std::endl;
@@ -51,7 +50,7 @@ void convert_float(float f)
 }
 void convert_double(double d)
 {
-	if (isprint(d))
+	if (isalpha(d))
 		std ::cout <<"char : "<< static_cast<char>(d) << std::endl;
 	else
 		std ::cout <<"char : Non displayable"<< std::endl;
@@ -83,7 +82,7 @@ int main(int argc, char **argv)
 			{
 				std ::cout <<"char : impossible " << std::endl;
 				std ::cout <<"int : impossible" << std::endl;
-				if (str_return == "-inf" || str_return == "+inf")
+				if (str_return == "-inf" || str_return == "+inf" || str_return == "nan")
 					std ::cout <<"float :"  << str_return << "f" << std::endl;
 				else
 					std ::cout <<"float :"  << str_return << std::endl;

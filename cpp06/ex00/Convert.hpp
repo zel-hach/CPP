@@ -1,38 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Convert.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/30 18:52:58 by zel-hach          #+#    #+#             */
-/*   Updated: 2023/01/05 15:11:38 by zel-hach         ###   ########.fr       */
+/*   Created: 2023/01/04 21:31:03 by zel-hach          #+#    #+#             */
+/*   Updated: 2023/01/04 21:31:59 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#ifndef _CONVERT_HPP
+#define  _CONVERT_HPP
+#include <iostream>
+#include <string>
+#include <cmath>
+#include <sstream>
+#include <iomanip>
 
-int main()
-{
-	Bureaucrat d;
-	Bureaucrat c(NULL,12);
-	try
-	{
-		Bureaucrat b("faiza",20);
-		b.setGrade(100);
-		try{
-			b.dec_Echel();
-			b.inc_Echel();
-		}
-		catch(const std::exception& e)
-		{
-			std::cout << e.what() << '\n';
-		}
-		std::cout << b;
-	}
-	catch(const std::exception& e)
-	{
-		std::cout << e.what() << '\n';
-	}
-	std::cout << c;
-}
+#endif

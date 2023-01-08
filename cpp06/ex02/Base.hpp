@@ -1,38 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/30 18:52:58 by zel-hach          #+#    #+#             */
-/*   Updated: 2023/01/05 15:11:38 by zel-hach         ###   ########.fr       */
+/*   Created: 2023/01/04 21:18:52 by zel-hach          #+#    #+#             */
+/*   Updated: 2023/01/04 21:21:10 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#ifndef _BASE_HPP
+#define _BASE_HPP
 
-int main()
+#include <iostream>
+class Base{
+	public:
+		virtual ~Base();
+};
+class A :public Base
 {
-	Bureaucrat d;
-	Bureaucrat c(NULL,12);
-	try
-	{
-		Bureaucrat b("faiza",20);
-		b.setGrade(100);
-		try{
-			b.dec_Echel();
-			b.inc_Echel();
-		}
-		catch(const std::exception& e)
-		{
-			std::cout << e.what() << '\n';
-		}
-		std::cout << b;
-	}
-	catch(const std::exception& e)
-	{
-		std::cout << e.what() << '\n';
-	}
-	std::cout << c;
-}
+};
+class B :public Base
+{
+};
+class C :public Base
+{
+};
+
+#endif

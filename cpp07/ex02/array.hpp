@@ -1,38 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/30 18:52:58 by zel-hach          #+#    #+#             */
-/*   Updated: 2023/01/05 15:11:38 by zel-hach         ###   ########.fr       */
+/*   Created: 2023/01/08 16:07:55 by zel-hach          #+#    #+#             */
+/*   Updated: 2023/01/08 22:27:57 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#ifndef _ITER_HPP
+#define _ITER_HPP
 
-int main()
-{
-	Bureaucrat d;
-	Bureaucrat c(NULL,12);
-	try
-	{
-		Bureaucrat b("faiza",20);
-		b.setGrade(100);
-		try{
-			b.dec_Echel();
-			b.inc_Echel();
-		}
-		catch(const std::exception& e)
-		{
-			std::cout << e.what() << '\n';
-		}
-		std::cout << b;
-	}
-	catch(const std::exception& e)
-	{
-		std::cout << e.what() << '\n';
-	}
-	std::cout << c;
-}
+#include <iostream>
+template <typename T>
+class Array{
+	T *array;
+	public:
+		Array();
+		Array(T *);
+		Array(const Array&);
+		Array Array(const Array&);
+		~Array();
+};
+#endif

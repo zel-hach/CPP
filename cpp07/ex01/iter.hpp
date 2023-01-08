@@ -1,38 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   iter.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/30 18:52:58 by zel-hach          #+#    #+#             */
-/*   Updated: 2023/01/05 15:11:38 by zel-hach         ###   ########.fr       */
+/*   Created: 2023/01/08 16:07:55 by zel-hach          #+#    #+#             */
+/*   Updated: 2023/01/08 19:38:23 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#ifndef _ITER_HPP
+#define _ITER_HPP
 
-int main()
+#include <iostream>
+template <typename T>
+void fun(const T& t)
 {
-	Bureaucrat d;
-	Bureaucrat c(NULL,12);
-	try
-	{
-		Bureaucrat b("faiza",20);
-		b.setGrade(100);
-		try{
-			b.dec_Echel();
-			b.inc_Echel();
-		}
-		catch(const std::exception& e)
-		{
-			std::cout << e.what() << '\n';
-		}
-		std::cout << b;
-	}
-	catch(const std::exception& e)
-	{
-		std::cout << e.what() << '\n';
-	}
-	std::cout << c;
+	std::cout << *t << std::endl;
 }
+template <typename T>
+void iter(T *tab,int size, void (*fun)(const T&))
+{
+	int i;
+	
+	i = 0;
+	while(i < size)
+	{
+		fun(tab[i]);
+		i++;
+	}
+}
+#endif

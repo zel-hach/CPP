@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 18:52:58 by zel-hach          #+#    #+#             */
-/*   Updated: 2023/01/03 13:15:59 by zel-hach         ###   ########.fr       */
+/*   Updated: 2023/01/05 15:15:48 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,10 @@ int main()
 {
 	Bureaucrat d;
 	Bureaucrat c("sahar",12);
+	Form f("test",1,2);
+	Form a;
+	a = f;
+	std::cout << a.getName() << std::endl;
 	try
 	{
 		Bureaucrat b("faiza",12);

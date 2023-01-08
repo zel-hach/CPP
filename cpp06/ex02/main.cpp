@@ -6,25 +6,14 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 21:47:30 by zel-hach          #+#    #+#             */
-/*   Updated: 2023/01/04 18:07:16 by zel-hach         ###   ########.fr       */
+/*   Updated: 2023/01/04 21:25:18 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-class Base{
-	public:
-		virtual ~Base(){};
-};
-class A :public Base
-{
-};
-class B :public Base
-{
-};
-class C :public Base
-{
-};
+#include "Base.hpp"
 
+Base :: ~Base(){
+		};
 Base * generate(void)
 {
 	srand(time(0));
@@ -76,9 +65,10 @@ void identify(Base& p)
 
 int main()
 {
-	Base *p;
 
+	Base *p;
 	p = generate();
 	identify(p);
 	identify(*p);
+	delete p;
 }
