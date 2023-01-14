@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 21:47:30 by zel-hach          #+#    #+#             */
-/*   Updated: 2023/01/04 21:25:18 by zel-hach         ###   ########.fr       */
+/*   Updated: 2023/01/13 14:09:38 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Base :: ~Base(){
 Base * generate(void)
 {
 	srand(time(0));
-	int i = rand()%3 + 1;
+	int i = rand() % 3 + 1;
 	if ( i == 1)
 		return(new A());
 	if (i == 2)
@@ -65,7 +65,6 @@ void identify(Base& p)
 
 int main()
 {
-
 	Base *p;
 	p = generate();
 	identify(p);
