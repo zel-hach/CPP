@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 16:07:55 by zel-hach          #+#    #+#             */
-/*   Updated: 2023/01/14 15:46:17 by zel-hach         ###   ########.fr       */
+/*   Updated: 2023/01/14 18:22:17 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ int Array<T>:: size() const
 template <typename T>
 Array<T>::~Array()
 {
+	delete array;
 	std::cout << "destructeur called" << std::endl;
 }
 #endif
