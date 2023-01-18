@@ -6,20 +6,20 @@
 #    By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/20 16:55:08 by zel-hach          #+#    #+#              #
-#    Updated: 2023/01/14 15:19:32 by zel-hach         ###   ########.fr        #
+#    Updated: 2023/01/17 17:18:06 by zel-hach         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = array
+NAME = span
 CC = c++
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC = main.cpp
+SRC = main.cpp span.cpp
 OBJECTS = $(SRC:.cpp=.o)
-INCLUDE = array.hpp
+INCLUDE = span.hpp
 
 all :$(NAME)
-array: $(OBJECTS)
+span: $(OBJECTS)
 	$(CC) $(FLAGS) $(OBJECTS) -o $(NAME)
 %.o : %.cpp $(INCLUDE)
 	$(CC) $(FLAGS) -o $@ -c $<

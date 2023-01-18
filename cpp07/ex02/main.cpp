@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 16:08:00 by zel-hach          #+#    #+#             */
-/*   Updated: 2023/01/14 15:47:25 by zel-hach         ###   ########.fr       */
+/*   Updated: 2023/01/16 21:51:29 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ int main(int, char**)
     catch(const std::exception& e)
     {
         std::cerr << e.what() << '\n';
+        
     }
 
     for (int i = 0; i < MAX_VAL; i++)

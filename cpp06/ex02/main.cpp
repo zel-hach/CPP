@@ -6,13 +6,14 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 21:47:30 by zel-hach          #+#    #+#             */
-/*   Updated: 2023/01/13 14:09:38 by zel-hach         ###   ########.fr       */
+/*   Updated: 2023/01/17 21:02:09 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Base.hpp"
 
 Base :: ~Base(){
+	std::cout << "---------------" << std::endl;
 		};
 Base * generate(void)
 {

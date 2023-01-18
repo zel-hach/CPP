@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/15 20:59:57 by zel-hach          #+#    #+#             */
-/*   Updated: 2023/01/15 23:35:14 by zel-hach         ###   ########.fr       */
+/*   Updated: 2023/01/17 20:51:32 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include<iostream>
 #include<vector>
 #include<exception>
+#include<limits>
 
 class Span
 {
@@ -30,6 +31,13 @@ class Span
 			void set_N(unsigned int);
 			unsigned int shortestSpan();
 			unsigned int longestSpan();
+			template<typename T,typename E>
+			void addNumbers(T t, E e){
+				if (_vec.size() + e - t > N)
+					throw std::exception();
+				_vec.insert(_vec.end(), t, e);
+			}
 			~Span();
 };
+
 #endif

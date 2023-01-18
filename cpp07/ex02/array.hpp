@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 16:07:55 by zel-hach          #+#    #+#             */
-/*   Updated: 2023/01/14 18:22:17 by zel-hach         ###   ########.fr       */
+/*   Updated: 2023/01/16 15:55:56 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,13 @@ class Array{
 template <typename T>
 Array<T> :: Array()
 {
+	std::cout << "default constructor called" << std::endl;
 	this->array = new T[0];
 }
 template <typename T>
 Array<T> :: Array(unsigned int  n)
 {
+	std::cout << "constructor with parametre called" << std::endl;
 	this->N = n;
 	this->array = new T[this->N];
 }
