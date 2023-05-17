@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 15:46:17 by zel-hach          #+#    #+#             */
-/*   Updated: 2023/05/16 11:22:17 by zel-hach         ###   ########.fr       */
+/*   Updated: 2023/05/17 19:04:49 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int BitcoinExchange::check_date(std::string date_string)
             p = std::strtok(NULL,"-");
             i++;
         }
-        if (i == 3 && (tab[1] < 1 || tab[1] > 12 || tab[2] < 1 || tab[2] > days_in_month(tab[0], tab[1]) || tab[0] > date->tm_year + 1900))
+        if (i == 3 && (tab[1] < 1 || tab[1] > 12 || tab[2] < 1 || tab[2] > days_in_month(tab[0], tab[1]) || tab[0] >= date->tm_year + 1900))
                 	return -1;
     }
     else

@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 15:46:05 by zel-hach          #+#    #+#             */
-/*   Updated: 2023/05/16 13:52:04 by zel-hach         ###   ########.fr       */
+/*   Updated: 2023/05/17 18:59:37 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main(int argc, char **argv)
 	int num;
 	char *token;
 	std::stack<int> s;
-	if (argc == 1)
+	if (argc == 2)
 	{
 		while (argv[i])
 		{
