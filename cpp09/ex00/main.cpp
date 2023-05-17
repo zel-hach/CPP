@@ -6,13 +6,11 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 15:45:32 by zel-hach          #+#    #+#             */
-/*   Updated: 2023/05/14 19:02:45 by zel-hach         ###   ########.fr       */
+/*   Updated: 2023/05/17 10:59:47 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "BitcoinExchange.hpp"
-
-
 
 std::map<std::string, double> open_csv_file()
 {

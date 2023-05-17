@@ -6,7 +6,7 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 15:46:17 by zel-hach          #+#    #+#             */
-/*   Updated: 2023/05/14 21:24:14 by zel-hach         ###   ########.fr       */
+/*   Updated: 2023/05/16 11:22:17 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int BitcoinExchange::check_date(std::string date_string)
     if (mp.length() == 10)
     {
         const char* cstr = mp.c_str();
-        char *p = std::strtok ((char *)cstr,"-");
+        char *p = std::strtok((char *)cstr,"-");
         int i = 0;
         while (p!=0)
         {

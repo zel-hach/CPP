@@ -6,34 +6,31 @@
 /*   By: zel-hach <zel-hach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/11 15:46:05 by zel-hach          #+#    #+#             */
-/*   Updated: 2023/05/11 15:46:06 by zel-hach         ###   ########.fr       */
+/*   Updated: 2023/05/16 13:52:04 by zel-hach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <sstream>
-#include <stack>
-bool isOperator(char* & argv)
-{
-	std::string str(argv);
-	if (str == "+" || str == "-" || str == "*" || str == "/" || str == "%")
-		return(true);
-	return(false);
-}
+#include "RPN.hpp"
+
 int main(int argc, char **argv)
 {
 	int i = 1;
+	std::string str;
 	int num;
 	char *token;
 	std::stack<int> s;
-	if (argc > 1)
+	if (argc == 1)
 	{
 		while (argv[i])
 		{
 			token = strtok(argv[i], " ");
+			if (token == NULL)
+				return 0;
 			while (token != NULL)
 			{
-				if (std::istringstream(token) >> num)
+				std::string str(token);
+				num = atoi(str.c_str());
+				if (str.length() == 1 && !isOperator(token) && is_digit(str))
 					s.push(num);
 				else if (isOperator(token))
 				{
@@ -66,9 +63,9 @@ int main(int argc, char **argv)
 			}
 			i++;
 		}
+		std::cout << s.top() << std::endl;
 	}
 	else
-		std::cout << "no arguments" << std::endl;
-	std::cout << s.top() << std::endl;
+		std::cout << "no arguments or too many arguments" << std::endl;
 	return(0);
 }
